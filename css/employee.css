@@ -1,0 +1,630 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  height: 1rem;
+  width: 0.3rem;
+  background: #0d2042;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #305497;
+  height: 1rem;
+  border-radius: 1rem;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 40px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.heading {
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  padding: 0.3rem 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.heading h1 {
+  color: #0d2042;
+}
+
+section {
+  min-height: 100vh;
+  display: none;
+}
+section.active {
+  display: block;
+}
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+.header .logo {
+  width: 7rem;
+  margin-left: 10%;
+}
+.header .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.header .menu-btn {
+  padding: 0 0.5rem;
+  border: 0.1rem solid #305497;
+  transform: translateX(-1rem);
+  cursor: pointer;
+}
+
+.header .menu-btn i {
+  color: #305497;
+  transition: 0.3s;
+}
+
+.header .menu-btn i.active {
+  transform: rotate(90deg);
+}
+
+header .menu {
+  position: fixed;
+  list-style: none;
+  top: 60px;
+  right: 0;
+  background: #0d2042;
+  width: 20rem;
+  height: 100%;
+  transform: translateX(250px);
+  padding-top: 0;
+  z-index: 100;
+  border-left: 0.2rem solid #3c9bb3;
+  transition: 0.5s;
+}
+
+header .menu.active {
+  transform: translateX(0px);
+  padding-top: 1rem;
+}
+
+header .menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+}
+header .menu li a:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+header .menu li a.active,
+header .menu li a:hover {
+  background: rgba(0, 0, 0, 0.25);
+  color: #00ccff;
+}
+header .menu li a i {
+  margin-right: 1rem;
+  padding: 0 0.5rem;
+}
+
+main .home {
+  background: #c2c2c249;
+}
+main .content {
+  flex-basis: 80%;
+  height: 100%;
+  padding: 5rem 10%;
+}
+
+main .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+main .row .box {
+  width: 12rem;
+  height: 10rem;
+  background-color: #0d2042;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+main .row .box:hover {
+  background: #3c9bb3;
+}
+main .row .box h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.content .form form {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+}
+
+.content .form form input {
+  border: 0.1rem solid transparent;
+  border-radius: 0.2rem;
+  padding: 0.6rem 1rem;
+  margin: 1rem 0;
+  outline: none;
+  transition: 0.2s;
+}
+.content .form form input::placeholder {
+  opacity: 1;
+  transition: 0.2s;
+}
+.content .form form input:focus::placeholder {
+  opacity: 0;
+}
+
+.content .form form input:focus {
+  border-color: #305497;
+}
+.content .form form .title {
+  margin: 0.5rem;
+}
+
+.content .form form .title h3 {
+  color: #0d2042;
+}
+
+.stData .table .student-info,
+.content .form form .student-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.stData .table .student-info .inputBox,
+.content .form form .student-info .inputBox {
+  display: flex;
+  gap: 5rem;
+}
+.stData .table .student-info input,
+.content .form form .student-info input {
+  width: 100%;
+}
+
+/* .content .form form .student-info input:not(:last-child) {
+  margin-right: 0.5rem;
+} */
+
+.content .form form table {
+  width: 100%;
+  text-align: center;
+}
+.content .form form table tr th {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.6rem 0;
+}
+.content .form form table tr input {
+  width: 80%;
+  margin: 0.5rem;
+}
+.content .form form table tr th {
+  color: #0d2042;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #0d2042;
+  border-top: 2px solid #0d2042;
+}
+
+.content .form form table tr td:not(:last-child) {
+  border-right: 1px solid #0d2042;
+}
+
+.content .form form .btn {
+  background-color: #305497;
+  color: #fff;
+  padding: 0.6rem 3.5rem;
+  display: block;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  user-select: none;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.content .form form .btn:active {
+  transform: scale(1.03);
+}
+.content .form form .btn:hover {
+  background-color: #0d2042;
+}
+
+.stData {
+  position: relative;
+}
+
+.stData .table {
+  background: rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.stData .table .search {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.stData .table .search div {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.stData .table .search input {
+  width: 60%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem 0 0 0.3rem;
+  border: none;
+  outline: none;
+  border: 2px solid #ccc;
+  border-right: none;
+  transition: 0.2s;
+}
+
+.stData .table .student-info input::placeholder,
+.stData .table .search input::placeholder {
+  opacity: 1;
+  transition: 0.2s;
+}
+.stData .table .student-info input:focus::placeholder,
+.stData .table .search input:focus::placeholder {
+  opacity: 0;
+}
+.stData .table .student-info input:focus,
+.stData .table .search input:focus {
+  border-color: #1b3057;
+}
+.stData .table .search i {
+  padding: 0.63rem 1.5rem;
+  background: #0d2042;
+  color: #fff;
+  border-radius: 0 0.3rem 0.3rem 0;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.stData .table .search i:hover {
+  background: #1b3057;
+}
+
+.stData .table .updateData form .closeUp {
+  color: #0d2042;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #0d2042;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  text-align: right;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.stData .table .updateData form .closeUp:hover {
+  background: #305497;
+  color: #fff;
+}
+.stData .table .updateData form {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  height: 0;
+  transition: 0.5s linear;
+  position: relative;
+}
+
+.stData .table .updateData form.active {
+  height: 240px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.stData .table .student-info input {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 0.3rem;
+}
+
+.stData .table .updateData form .update {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #0d2042;
+  margin: 1rem 0;
+  border: none;
+  padding: 0.7rem 0;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.stData .table .updateData form .update:hover {
+  background: green;
+}
+
+.stData .table table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.stData .table table tr:nth-child(even) {
+  background: rgba(13, 47, 70, 0.15);
+}
+
+.stData .table table tr:last-child {
+  border-bottom: 1px solid #809bce;
+}
+
+.stData .table table tr th {
+  background: #0d2042;
+  color: #fff;
+}
+
+.stData .table table tr th,
+.stData .table table tr td:not(:last-child) {
+  padding: 0.5rem 0;
+  border-right: 1px solid #fff;
+}
+
+.stData .table table tr td button {
+  background: green;
+  color: #fff;
+  padding: 0.4rem 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  user-select: none;
+}
+.stData .table table tr td button#delete {
+  background: red;
+}
+
+#deleteAll button:hover,
+.stData .table table tr td button:hover {
+  opacity: 0.6;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* #deleteAll button:active,
+.stData .table table tr td button:active {
+  transform: scale(.95);
+} */
+
+#deleteAll button {
+  background: red;
+  color: #fff;
+  width: fit-content;
+  padding: 0.5rem 5rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Media query */
+
+@media (max-width: 991px) {
+  header .menu {
+    transform: translateX(0);
+    height: auto;
+
+    border-bottom: 4px solid #00ccff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .menu.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding-top: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .content .form form .student-info {
+    text-align: left;
+  }
+  .content .form form .student-info .inputBox {
+    flex-direction: column;
+    gap: 0;
+  }
+  .content .form form .student-result .student-grade input,
+  .content .form form .student-result .matter-grade input {
+    width: 6rem;
+    margin: 1rem 0.5rem;
+  }
+  .content .form form .student-result .title h3 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .stData .table .search {
+    flex-direction: column;
+  }
+  .stData .table .search input,
+  .stData .table .search div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  main .content {
+    padding: 5rem 0;
+  }
+  .content .form form .student-result .matter input {
+    width: 10rem;
+  }
+  .content .form form .student-result .student-grade input,
+  .content .form form .student-result .matter-grade input {
+    width: 5rem;
+    padding: 0.5rem 0;
+  }
+  .content .form form table tr th {
+    font-size: 1rem;
+  }
+  .stData .table table tr th {
+    font-size: 12px;
+  }
+  .stData .table table tr td button {
+    padding: 0.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .content .form form .student-result .student-grade input,
+  .content .form form .student-result .matter-grade input {
+    width: 3rem;
+  }
+  .content .form form table tr th {
+    font-size: 0.7rem;
+  }
+  .content .form form input {
+    padding: 0.5rem;
+  }
+}
+
+/* Alert */
+
+.stData .syeetAlert {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(15, 76, 155, 0.932);
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: 0.3s;
+}
+.stData .syeetAlert.active {
+  top: 10%;
+}
+
+.stData .syeetAlert .message button {
+  padding: 0.3rem 1.5rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 0.15rem;
+  color: #0d2042;
+  font-weight: bold;
+  transition: 0.2s;
+  background: #fff;
+  cursor: pointer;
+}
+
+.stData .syeetAlert .message button:hover {
+  background: #0d2042;
+  color: #fff;
+}
+.success_alert {
+  left: -100%;
+}
+.erorr_alert,
+.success_alert {
+  top: 5rem;
+  position: absolute;
+  background-color: rgba(15, 76, 155, 0.932);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: 0.5s;
+}
+.erorr_alert .message,
+.success_alert {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.success_alert.active {
+  left: 4rem;
+}
+
+.erorr_alert {
+  top: -100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.erorr_alert.active {
+  top: 5rem;
+}
+
+.erorr_alert h3,
+.success_alert h3 {
+  font-size: 1.4rem;
+}
+.erorr_alert i,
+.success_alert i {
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.erorr_alert .close_alert_erorr {
+  text-align: center;
+  display: block;
+  padding: 0.5rem 2rem;
+  margin: auto;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #fff;
+  color: #0d2042;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.erorr_alert .close_alert_erorr:hover {
+  background-color: #0d2042;
+  color: #fff;
+}

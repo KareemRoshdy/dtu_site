@@ -1,0 +1,307 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap"); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.container .form {
+  flex-basis: 35%;
+  width: 100%;
+  height: 100%;
+  background: #e9e9e9;
+  padding: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container .form .alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #efeff0a1;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+
+.container .form .alert.active {
+  transform: translateY(0);
+}
+
+.container .form .alert > i {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  padding: 0.5rem 0.6rem;
+  border: 2px solid #305497;
+  color: #305497;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.container .form .alert > i:hover {
+  background: #305497;
+  color: #fff;
+}
+
+.container .form .alert .message {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: #1e3a69d0;
+  color: #fff;
+  text-align: center;
+}
+
+.container .form .alert .message i {
+  padding: 1rem;
+  border: 0.2rem solid #ccc;
+  border-radius: 50%;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.container .form .alert .message button {
+  padding: 0.3rem 2rem;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: #1e3969;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.container .form .alert .message button:hover {
+  background: #0f2041;
+  color: #ccc;
+}
+
+.container .form .chose {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  /* margin-top: 30px; */
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.container .form .chose a {
+  color: #305497;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+  position: relative;
+  transition: 0.5s;
+}
+
+.container .form .chose a.active {
+  color: #fff;
+  background: #305497;
+}
+
+.container .form .title h2 {
+  text-align: center;
+  padding: 15px 0;
+  color: #305497;
+}
+
+.container .form form {
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(204, 204, 204, 0.658);
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.container .form form .logo {
+  width: 150px;
+  margin: auto;
+}
+
+.container .form form .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .form form .heading {
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.container .form form .heading h2 {
+  color: #305497;
+}
+
+.container .form form .inputBox {
+  position: relative;
+}
+
+.container .form form .inputBox input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  padding-left: 35px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-size: 16px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: 0.2s;
+}
+
+.container .form form .inputBox input:focus {
+  border-color: #305497;
+}
+
+.container .form form .inputBox i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #333;
+  transition: 0.2s;
+}
+
+.container .form form .inputBox .passEye {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.container .form form .inputBox i.active {
+  color: #305497;
+}
+
+.container .form form .inputBox input::placeholder {
+  opacity: 1;
+  transition: 0.2s;
+}
+.container .form form .inputBox input:focus::placeholder {
+  opacity: 0;
+}
+
+.container .form form .btn {
+  display: block;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px 0;
+  border: none;
+  background: #305497;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.container .form form .btn:hover {
+  background-color: #333;
+}
+
+.container .form form .forgot {
+  color: #305497;
+  transition: 0.2s;
+}
+.container .form form .forgot:hover {
+  color: #333;
+}
+
+.formes {
+  position: relative;
+  display: flex;
+  transition: 0.5s;
+}
+
+.container .form form.student {
+  transition: 0.5s;
+
+  transform: translateX(0px);
+}
+.container .form form.employee {
+  transition: 0.5s;
+  position: absolute;
+  transform: translateX(1000px);
+}
+
+.container .banner {
+  flex-basis: 70%;
+  height: 100%;
+  background: url(../img/bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container .banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 1220px) {
+  .container .banner {
+    flex-basis: 50%;
+  }
+  .container .form {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .container .form {
+    padding: 20px;
+  }
+}
+@media (max-width: 797px) {
+  .container .banner {
+    display: none;
+  }
+  .container .form {
+    flex-basis: 100%;
+    padding: 50px 100px;
+  }
+}
+@media (max-width: 650px) {
+  .container .form {
+    padding: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .container .form {
+    padding: 30px 10px;
+  }
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="descriptions" content="student page to know the result" />
+    <title>Student Page</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/student.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul class="links">
+            <li>
+              <a data-sec="basic" class="active" href="#basic">Basic Data</a>
+            </li>
+            <li><a data-sec="examiner" href="#examiner">Examiner Table</a></li>
+            <li><a data-sec="scedule" href="#scedule">School Scedule</a></li>
+            <li><a data-sec="fees" href="#fees">Study Fees</a></li>
+            <li><a data-sec="pass" href="#pass">Change The Password</a></li>
+            <li><a href="result.html">Study Results</a></li>
+          </ul>
+          <i class="fas fa-bars"></i>
+          <button type="button" class="logout">
+            Log Out <i class="fas fa-arrow-circle-right"></i>
+          </button>
+        </nav>
+      </header>
+
+      <section class="basic active" id="basic">
+        <div class="table">
+          <div class="heading">
+            <h1>Basic Data</h1>
+          </div>
+          <table>
+            <tr>
+              <td>
+                <img src="img/avatar.svg" alt="img" />
+              </td>
+            </tr>
+            <tr>
+              <td>Student Name :</td>
+              <td>Kareem Roshdy Shokry Ibrahem</td>
+            </tr>
+            <tr>
+              <td>Department :</td>
+              <td>Information Technology (IT)</td>
+            </tr>
+            <tr>
+              <td>Student Email :</td>
+              <td>Kareem@domain.org</td>
+            </tr>
+            <tr>
+              <td>Study Semester :</td>
+              <td>Second Phase</td>
+            </tr>
+            <tr>
+              <td>Year Of Enrollment :</td>
+              <td>2019 / 2020</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="examiner" id="examiner">
+        <div class="table">
+          <div class="heading">
+            <h1>Examiner Table</h1>
+          </div>
+          <table>
+            <tr>
+              <th>Days</th>
+              <th>Exam Date</th>
+              <th>Materials</th>
+              <th>Exam Time</th>
+            </tr>
+            <tr>
+              <th>Saturday</th>
+              <td>1 / 1 / 2022</td>
+              <td>Linux</td>
+              <td>2h</td>
+            </tr>
+            <tr>
+              <th>Sunday</th>
+              <td>2 / 1 / 2022</td>
+              <td>OS</td>
+              <td>1h</td>
+            </tr>
+            <tr>
+              <th>Monday</th>
+              <td>3 / 1 / 2022</td>
+              <td>Digital Engineering</td>
+              <td>2h</td>
+            </tr>
+            <tr>
+              <th>Tuesday</th>
+              <td>4 / 1 / 2022</td>
+              <td>Web Programming</td>
+              <td>2h</td>
+            </tr>
+            <tr>
+              <th>Wednesday</th>
+              <td>5 / 1 / 2022</td>
+              <td>C++</td>
+              <td>2h</td>
+            </tr>
+            <tr>
+              <th>Thursday</th>
+              <td>6 / 1 / 2022</td>
+              <td>Database</td>
+              <td>1h</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="scedule" id="scedule">
+        <div class="table">
+          <div class="heading">
+            <h1>School Scedule</h1>
+          </div>
+          <table>
+            <tr>
+              <th>Days</th>
+              <th>Materials</th>
+              <th>Lectur Time</th>
+            </tr>
+            <tr>
+              <th rowspan="3">Sunday</th>
+              <td>OS (lectur)</td>
+              <td>9:00 - 10:30</td>
+            </tr>
+            <tr>
+              <td>Digital Engineering (lectur)</td>
+              <td>10:45 - 12:00</td>
+            </tr>
+            <tr>
+              <td>Web Programming (section)</td>
+              <td>12:15 - 3:15</td>
+            </tr>
+            <tr>
+              <th rowspan="2">Monday</th>
+              <td>linux (lectur)</td>
+              <td>9:00 - 10:30</td>
+            </tr>
+            <tr>
+              <td>linux (section)</td>
+              <td>10:45 - 1:10</td>
+            </tr>
+            <tr>
+              <th rowspan="4">Tuesday</th>
+              <td>Database (lectur)</td>
+              <td>9:00 - 10:30</td>
+            </tr>
+            <tr>
+              <td>Web Programming (lectur)</td>
+              <td>10:45 - 12:00</td>
+            </tr>
+            <tr>
+              <td>C++(lectur)</td>
+              <td>12:10 - 1:10</td>
+            </tr>
+            <tr>
+              <td>Digital Engineering (section)</td>
+              <td>1:20 - 3:20</td>
+            </tr>
+            <tr>
+              <th rowspan="4">Wednesday</th>
+              <td>Database (lectur)</td>
+              <td>9:00 - 10:30</td>
+            </tr>
+            <tr>
+              <td>Web Programming (lectur)</td>
+              <td>10:45 - 12:00</td>
+            </tr>
+            <tr>
+              <td>C++(lectur)</td>
+              <td>12:10 - 1:10</td>
+            </tr>
+            <tr>
+              <td>Digital Engineering (section)</td>
+              <td>1:20 - 3:20</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="fees" id="fees">
+        <div class="table">
+          <div class="heading">
+            <h1>Study Fees</h1>
+          </div>
+          <table>
+            <tr>
+              <th>Years Study</th>
+              <th>Classroom</th>
+              <th>Expenses</th>
+            </tr>
+            <tr>
+              <th rowspan="2">First Class</th>
+              <td>First Classroom Fess</td>
+              <td>Expenses Were Replied</td>
+            </tr>
+            <tr>
+              <td>Second Classroom Fess</td>
+              <td>Expenses Were Replied</td>
+            </tr>
+            <tr>
+              <th rowspan="2">Second Class</th>
+              <td>First Classroom Fess</td>
+              <td>Expenses Were Replied</td>
+            </tr>
+            <tr>
+              <td>Second Classroom Fess</td>
+              <td>Expenses Were Not Replied</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="pass" id="pass">
+        <div class="table">
+          <div class="heading">
+            <h1>Change The Password</h1>
+          </div>
+
+          <form action="">
+            <input
+              type="password"
+              placeholder="Enter Your Last Password"
+              name="oldpass"
+            />
+            <input
+              type="password"
+              placeholder="Enter Your New Password"
+              name="newpass"
+            />
+            <input
+              type="password"
+              placeholder="Return A New Password"
+              name="newpass"
+            />
+            <input type="submit" value="Save New Password" />
+            <a href="#" class="forgot">Forgot Password</a>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/student.js"></script>
+  </body>
+</html>

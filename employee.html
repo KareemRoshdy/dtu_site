@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/employee.css" />
+    <title>Employee Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="#" data-sec="home" title="home page"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="#" data-sec="message" title="messages"
+              ><i class="fas fa-envelope"></i> Messages</a
+            >
+          </li>
+          <li>
+            <a href="#" data-sec="result" title="Result"
+              ><i class="fas fa-plus-circle"></i> Add Result</a
+            >
+          </li>
+          <li>
+            <a href="#" data-sec="stData" title="stData"
+              ><i class="fas fa-user-circle"></i>Students Data</a
+            >
+          </li>
+          <li>
+            <a href="#" id="logout" title="log out"
+              ><i class="fas fa-arrow-circle-right"></i> Log out</a
+            >
+          </li>
+        </ul>
+      </header>
+
+      <main>
+        <section class="content home">
+          <div class="row">
+            <div class="box">
+              <h3>Add Result</h3>
+            </div>
+            <div class="box">
+              <h3>Add Student</h3>
+            </div>
+            <div class="box">
+              <h3>Add School Scedule</h3>
+            </div>
+            <div class="box">
+              <h3>Add ...</h3>
+            </div>
+            <div class="box">
+              <h3>Add ...</h3>
+            </div>
+            <div class="box">
+              <h3>Add ...</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="content message">
+          <div class="heading">
+            <h1>No Messages</h1>
+          </div>
+        </section>
+
+        <section class="content result">
+          <div class="erorr_alert">
+            <div class="message">
+              <i class="fas fa-times"></i>
+              <h3>You must fill in all the data</h3>
+            </div>
+            <button class="close_alert_erorr">Ok</button>
+          </div>
+          <div class="success_alert">
+            <i class="fas fa-check"></i>
+            <h3>Data saved</h3>
+          </div>
+          <div class="heading">
+            <h1>Add Result</h1>
+          </div>
+          <div class="form">
+            <form action="">
+              <div class="title">
+                <h3>Student Information</h3>
+              </div>
+              <div class="student-info">
+                <input
+                  id="stName"
+                  type="text"
+                  name="st_name"
+                  placeholder="Student Full Name"
+                />
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    id="stDept"
+                    name="st_dept"
+                    placeholder="Student Department"
+                  />
+                  <input
+                    type="text"
+                    name="st_phase"
+                    id="stPhase"
+                    placeholder="Student Phase"
+                  />
+                </div>
+                <div class="inputBox">
+                  <input
+                    type="email"
+                    id="stEmail"
+                    name="st_email"
+                    placeholder="Student Email"
+                  />
+                  <input
+                    type="number"
+                    id="stId"
+                    name="st_id"
+                    placeholder="Student ID"
+                  />
+                </div>
+              </div>
+
+              <table>
+                <tr>
+                  <th>Materials</th>
+                  <th>Grade</th>
+                  <th>Student Grade</th>
+                </tr>
+                <tr class="first">
+                  <td>
+                    <input type="text" placeholder="First Article" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="First Article Grade" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Student Grade" />
+                  </td>
+                </tr>
+                <tr class="second">
+                  <td>
+                    <input type="text" placeholder="Second Article" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Second Article Grade" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Student Grade" />
+                  </td>
+                </tr>
+                <tr class="third">
+                  <td>
+                    <input type="text" placeholder="Third Article" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Third Article Grade" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Student Grade" />
+                  </td>
+                </tr>
+                <tr class="fourth">
+                  <td>
+                    <input type="text" placeholder="Fourth Article" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Fourth Article Grade" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Student Grade" />
+                  </td>
+                </tr>
+                <tr class="fifth">
+                  <td>
+                    <input type="text" placeholder="Fifth Article" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Fifth Article Grade" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Student Grade" />
+                  </td>
+                </tr>
+                <tr class="sixth">
+                  <td>
+                    <input type="text" placeholder="Sixth Article" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Sixth Article Grade" />
+                  </td>
+                  <td>
+                    <input type="number" placeholder="Student Grade" />
+                  </td>
+                </tr>
+              </table>
+              <button type="submit" value="" id="submit" class="btn">
+                Save Result
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <section class="content stData active">
+          <div class="syeetAlert">
+            <div class="message">
+              <h3>Are You Sure!</h3>
+              <button class="yes">Yes</button>
+              <button class="no">No</button>
+            </div>
+          </div>
+          <div class="heading">
+            <h1>Students Data</h1>
+          </div>
+
+          <div class="table">
+            <div class="search">
+              <div class="searchName">
+                <input
+                  id="searchName"
+                  type="search"
+                  placeholder="Search By Name..."
+                />
+                <i id="search_name_btn" class="fas fa-search"></i>
+              </div>
+              <div class="searchId">
+                <input
+                  id="searchById"
+                  type="search"
+                  placeholder="Search By ID..."
+                />
+                <i id="search_id_btn" class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="updateData">
+              <form action="">
+                <i class="fas fa-times closeUp"></i>
+                <div class="student-info">
+                  <input
+                    id="stNameUp"
+                    type="text"
+                    name="st_name"
+                    placeholder="Student Full Name"
+                  />
+                  <div class="inputBox">
+                    <input
+                      type="text"
+                      id="stDeptUp"
+                      name="st_dept"
+                      placeholder="Student Department"
+                    />
+                    <input
+                      type="text"
+                      name="st_phase"
+                      id="stPhaseUp"
+                      placeholder="Student Phase"
+                    />
+                  </div>
+                  <div class="inputBox">
+                    <input
+                      type="email"
+                      id="stEmailUp"
+                      name="st_email"
+                      placeholder="Student Email"
+                    />
+                    <input
+                      type="number"
+                      id="stIdUp"
+                      name="st_id"
+                      placeholder="Student ID"
+                    />
+                  </div>
+                </div>
+                <button href="#" id="submit" class="update">Update</button>
+              </form>
+            </div>
+            <div id="deleteAll"></div>
+            <table id="stTableData">
+              <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Student Department</th>
+                <th>Student Phase</th>
+                <th>Student Email</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+              <tbody id="tbody">
+                <!-- <tr>
+                  <td>1234567890</td>
+                  <td>Kareem Roshdy Shokry Ebrahim</td>
+                  <td>IT</td>
+                  <td>Second Phase</td>
+                  <td>Kareem@dtu.org</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/employee.js"></script>
+  </body>
+</html>

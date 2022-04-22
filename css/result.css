@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+  width: 5px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #263238;
+  border-radius: 5px;
+}
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  /* background: url(../img/1.jpg) no-repeat; */
+  background: url(../img/bg.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 30px);
+  /* background: rgba(235, 235, 235, 0.9); */
+  background: rgba(83, 83, 83, 0.73);
+  z-index: -1;
+}
+.header {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.534);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.01);
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: #ffffff;
+  transition: 0.7s;
+}
+.header:hover::before {
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo img {
+  width: 150px;
+  object-fit: cover;
+}
+
+nav .title a {
+  color: #fff;
+  background: #0d47a1;
+  padding: 5px 20px;
+  border-radius: 3px;
+  font-size: 18px;
+  text-decoration: none;
+}
+nav .title a:hover {
+  background: #263238;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.box .left {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  nav .logo img {
+    width: 120px;
+  }
+  nav .title h2 {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+  .box {
+    flex-direction: column;
+  }
+  nav .title a {
+    font-size: 15px;
+  }
+}
+
+.box .left .img {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.box .left .img img {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box .left .info {
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  line-height: 2;
+  margin-left: 15px;
+  color: #fff;
+}
+.box .left .info p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.box .right {
+  flex-basis: 80%;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.box .right table {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+table tr:nth-child(odd) {
+  background: #213e7e50;
+}
+
+.table-header th {
+  padding: 12px 0;
+  background: #06032e;
+  color: #fff;
+}
+table th:not(:last-child),
+table td:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+table td {
+  background: #3f3f3f44;
+  padding: 12px 0;
+}
+table tr:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+
+table tr td:first-child {
+  background: #06032e;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  nav .logo img {
+    width: 80px;
+  }
+  nav .title h2 {
+    font-size: 8px;
+    border-radius: 3px;
+  }
+  .box .left{
+    padding: 15px;
+  }
+  .box .left .info {
+    padding: 5px;
+  }
+  .box .left .info p {
+    font-size: 10px;
+  }
+  table td {
+    font-size: 12px;
+  }
+
+  .box .right table {
+    width: 100%;
+  }
+  .table-header th{
+    font-size: 12px;
+  }
+}

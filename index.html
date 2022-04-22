@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/newForm.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="alert">
+          <i class="fas fa-times closeAlert"id="closeAlert"></i>
+          <div class="message">
+            <i class="fas fa-times"></i>
+            <h3>Your Email Or Password Is Wrong!</h3>
+            <p>Tray Agen</p>
+            <button class="closeAlert" id="alertBtn">OK</button>
+          </div>
+        </div>
+        <div class="chose">
+          <a href="#" data-obj="student" class="student active">Student</a>
+          <a href="#" data-obj="employee" class="employee">Employee</a>
+        </div>
+        <div class="title">
+           <h2>Sign in to get started</h2>
+        </div>
+
+        <div class="formes">
+        <!-- Student Form -->
+        <form action="" class="student">
+          <div class="logo">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <div class="heading">
+            <h2>Student Form</h2>
+          </div>
+          <div class="inputBox">
+            <input class="stEmail" type="email" data-user="user" placeholder="Email or phone number" required/>
+            <i class="fas fa-user user-st"></i>
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-eye-slash fa-eye passEye st"></span>
+            <input class="stPass" type="password" data-pass="pass" placeholder="Password" />
+            <i class="fas fa-lock lok-st"></i>
+          </div>
+          <input id="stlogin" type="submit" value="Login" class="btn" />
+          <a href="#" class="forgot">Forgot your password?</a>
+        </form>
+
+        <!-- Employee Form -->
+        <form action="" class="employee">
+          <div class="logo">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <div class="heading">
+            <h2>Employee Form</h1>
+          </div>
+          <div class="inputBox">
+            <input class="empEmail" type="email" data-user="user" placeholder="Email or phone number" required/>
+            <i class="fas fa-user user-emp"></i>
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-eye-slash fa-eye passEye emp"></span>
+            <input class="empPass" type="password" data-pass="pass" placeholder="Password" />
+            <i class="fas fa-lock lok-emp"></i>
+          </div>
+          <input id="emplogin" type="submit" value="Login" class="btn" />
+          <a href="#" class="forgot">Forgot your password?</a>
+        </form>
+      </div>
+      </div>
+      <div class="banner"></div>
+    </div>
+
+    <script src="js/form.js"></script>
+  </body>
+</html>
